@@ -30,8 +30,7 @@ namespace synnex_mvc_app_1.Controllers
             return View();
         }
 
-        [HttpPost]
-        
+        [HttpPost]        
         public IActionResult CreateStudent(Student student)
         {
             if (!ModelState.IsValid)
@@ -44,7 +43,7 @@ namespace synnex_mvc_app_1.Controllers
             {
                 if (student.Age < 20)
                 {
-                    ModelState.AddModelError("", "student belonging to Delhi should have age gerate than or equal to 20");
+                    ModelState.AddModelError("", "Student belonging to Delhi should have age greater than or equal to 20.");
                     return View(student);
                 }
             }

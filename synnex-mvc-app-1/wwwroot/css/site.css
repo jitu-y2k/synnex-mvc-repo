@@ -21,7 +21,7 @@ body {
   margin-bottom: 60px;
 }
 
-.field-validation-error{
+.field-validation-error, .validation-summary-errors{
     color:red;
 }
 

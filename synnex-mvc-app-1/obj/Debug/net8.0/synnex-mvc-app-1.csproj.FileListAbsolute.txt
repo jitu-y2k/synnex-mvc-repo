@@ -367,3 +367,4 @@
 /Users/jitendrasharma/Projects/TD Synnex Corp/synnex-mvc-app-1/synnex-mvc-app-1/obj/Debug/net8.0/synnex-mvc-app-1.pdb
 /Users/jitendrasharma/Projects/TD Synnex Corp/synnex-mvc-app-1/synnex-mvc-app-1/obj/Debug/net8.0/synnex-mvc-app-1.genruntimeconfig.cache
 /Users/jitendrasharma/Projects/TD Synnex Corp/synnex-mvc-app-1/synnex-mvc-app-1/obj/Debug/net8.0/ref/synnex-mvc-app-1.dll
+/Users/jitendrasharma/Projects/TD Synnex Corp/synnex-mvc-app-1/synnex-mvc-app-1/obj/Debug/net8.0/synnex-mvc-app-1.sourcelink.json

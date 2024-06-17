@@ -4,8 +4,18 @@ builder.Services.AddHttpContextAccessor();
 builder.Services.AddDistributedMemoryCache();
 builder.Services.AddSession();
 
+
+
 // Add services to the container.
-builder.Services.AddControllersWithViews(); //.AddRazorRuntimeCompilation();
+if (builder.Environment.IsDevelopment())
+{
+    builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();
+}
+else
+{
+    builder.Services.AddControllersWithViews();
+
+}
 
 var app = builder.Build();
 
