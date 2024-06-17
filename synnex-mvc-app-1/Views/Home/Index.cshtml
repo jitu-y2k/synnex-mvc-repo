@@ -1,0 +1,15 @@
+﻿@*@using synnex_mvc_app_1.Models;*@
+@using synnex_mvc_app_1.ViewModels;
+@model StudentWithSubjects;
+
+
+@{
+    ViewData["Title"] = "Home Page";    
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome To My @Model.Student.Name</h1>
+    <h4>@ViewBag.tmpData?.Name</h4>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+

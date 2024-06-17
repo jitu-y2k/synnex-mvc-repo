@@ -1,0 +1,33 @@
+﻿@model List<Student>
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<h2>Student List</h2>
+
+@Html.ActionLink("Create New Student", "CreateStudent","Student", null, new {@class="btn btn-success text-end", @style="float:right;"})
+
+<table class="table table-border table-stripe">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Address</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var student in Model)
+        {
+            <tr>
+                <td>@Html.ActionLink(@student.Name, "StudentDetails", new {id=@student.Id })</td>
+                <td>@student.Age</td>
+                <td>@student.Address</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
