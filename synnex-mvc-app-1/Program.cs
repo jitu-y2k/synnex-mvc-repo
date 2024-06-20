@@ -14,14 +14,16 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
         config.ExpireTimeSpan = TimeSpan.FromMinutes(30);
     });
 
-builder.Services.AddAuthorization(config =>
-{
-    config.AddPolicy("ShouldBe18YearsOld", policy =>
-    {
-        policy.AddAuthenticationSchemes(CookieAuthenticationDefaults.AuthenticationScheme);
-        policy.RequireClaim()
-    });
-});
+builder.Services.AddAuthorization();
+
+//builder.Services.AddAuthorization(config =>
+//{
+//    config.AddPolicy("ShouldBe18YearsOld", policy =>
+//    {
+//        policy.AddAuthenticationSchemes(CookieAuthenticationDefaults.AuthenticationScheme);
+//        //policy.RequireClaim();
+//    });
+//});
 Console.WriteLine();
 
 // Add services to the container.

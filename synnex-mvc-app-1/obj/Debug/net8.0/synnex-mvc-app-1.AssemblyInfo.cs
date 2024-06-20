@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("synnex-mvc-app-1")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4fa791ff940860d87c8a297779fbeb421d248fdd")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2983eb73e0d37bf5c9436098a81f35d0c1f1df26")]
 [assembly: System.Reflection.AssemblyProductAttribute("synnex-mvc-app-1")]
 [assembly: System.Reflection.AssemblyTitleAttribute("synnex-mvc-app-1")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
