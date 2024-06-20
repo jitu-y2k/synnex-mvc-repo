@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using synnex_mvc_app_1.Data;
 using synnex_mvc_app_1.Models;
@@ -10,6 +11,7 @@ using synnex_mvc_app_1.Models;
 
 namespace synnex_mvc_app_1.Controllers
 {
+    [Authorize]
     public class StudentController : Controller
     {
         // GET: /<controller>/

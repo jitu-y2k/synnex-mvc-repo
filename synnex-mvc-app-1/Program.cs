@@ -1,10 +1,28 @@
-﻿var builder = WebApplication.CreateBuilder(args);
+﻿using Microsoft.AspNetCore.Authentication.Cookies;
+
+var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddDistributedMemoryCache();
 builder.Services.AddSession();
 
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+    .AddCookie(CookieAuthenticationDefaults.AuthenticationScheme, config =>
+    {
+        config.AccessDeniedPath = "/Accounts/AccessDenied";
+        config.LoginPath = "/Accounts/Login";
+        config.ExpireTimeSpan = TimeSpan.FromMinutes(30);
+    });
 
+builder.Services.AddAuthorization(config =>
+{
+    config.AddPolicy("ShouldBe18YearsOld", policy =>
+    {
+        policy.AddAuthenticationSchemes(CookieAuthenticationDefaults.AuthenticationScheme);
+        policy.RequireClaim()
+    });
+});
+Console.WriteLine();
 
 // Add services to the container.
 if (builder.Environment.IsDevelopment())
@@ -32,6 +50,8 @@ app.UseStaticFiles();
 
 app.UseRouting();
 app.UseSession();
+
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(

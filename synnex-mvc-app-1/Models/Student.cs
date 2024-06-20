@@ -8,7 +8,7 @@ public class Student
 	public int Id { get; set; }
 	[Required]
 	public string Name { get; set; }
-	[Required]
+	[Required(ErrorMessage ="Age is mandatory")]
 	[Range(18,90)]
 	public int? Age { get; set; }
 	public string Address { get; set; }

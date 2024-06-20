@@ -10,17 +10,19 @@
   <PropertyGroup Condition=" '$(RunConfiguration)' == 'https' " />
   <PropertyGroup Condition=" '$(RunConfiguration)' == 'http' " />
   <ItemGroup>
-    <!--<PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="8.0.6" />-->
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="8.0.6" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="ViewModels\" />
     <None Remove="Data\" />
     <None Remove="Views\Student\" />
+    <None Remove="Views\Accounts\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ViewModels\" />
     <Folder Include="Data\" />
     <Folder Include="Views\Student\" />
+    <Folder Include="Views\Accounts\" />
   </ItemGroup>
 </Project>

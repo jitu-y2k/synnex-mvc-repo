@@ -33,17 +33,17 @@ public class HomeController : Controller
             Age= 20
         };
 
-        var studentwithSubjects = new StudentWithSubjects()
-        {
-            Student = student,
-            Subjects = new List<string>() { "English", "Maths"}
-        };
+        //var studentwithSubjects = new StudentWithSubjects()
+        //{
+        //    Student = student,
+        //    Subjects = new List<string>() { "English", "Maths"}
+        //};
 
         //ViewData["student"] = student;
         ViewBag.tmpData = tmpData==null?null:JsonConvert.DeserializeObject<User>(tmpData?.ToString());
 
 
-        return View(studentwithSubjects);
+        return View();
     }
 
     public IActionResult Privacy()

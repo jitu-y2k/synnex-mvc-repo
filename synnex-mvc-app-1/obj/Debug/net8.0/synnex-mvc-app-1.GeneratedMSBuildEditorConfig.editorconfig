@@ -18,6 +18,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes = true
 build_property.MSBuildProjectDirectory = /Users/jitendrasharma/Projects/TD Synnex Corp/synnex-mvc-app-1/synnex-mvc-app-1
 build_property._RazorSourceGeneratorDebug = 
 
+[/Users/jitendrasharma/Projects/TD Synnex Corp/synnex-mvc-app-1/synnex-mvc-app-1/Views/Accounts/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudHMvTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/jitendrasharma/Projects/TD Synnex Corp/synnex-mvc-app-1/synnex-mvc-app-1/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
