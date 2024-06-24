@@ -18,6 +18,30 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes = true
 build_property.MSBuildProjectDirectory = /Users/jitendrasharma/Projects/TD Synnex Corp/synnex-mvc-app-1/synnex-mvc-app-1
 build_property._RazorSourceGeneratorDebug = 
 
+[/Users/jitendrasharma/Projects/TD Synnex Corp/synnex-mvc-app-1/synnex-mvc-app-1/Pages/Teachers/CreateTeacher.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvVGVhY2hlcnMvQ3JlYXRlVGVhY2hlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jitendrasharma/Projects/TD Synnex Corp/synnex-mvc-app-1/synnex-mvc-app-1/Pages/Teachers/TeachersList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvVGVhY2hlcnMvVGVhY2hlcnNMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jitendrasharma/Projects/TD Synnex Corp/synnex-mvc-app-1/synnex-mvc-app-1/Pages/Teachers/UpdateTeacher.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvVGVhY2hlcnMvVXBkYXRlVGVhY2hlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jitendrasharma/Projects/TD Synnex Corp/synnex-mvc-app-1/synnex-mvc-app-1/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jitendrasharma/Projects/TD Synnex Corp/synnex-mvc-app-1/synnex-mvc-app-1/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jitendrasharma/Projects/TD Synnex Corp/synnex-mvc-app-1/synnex-mvc-app-1/Views/Accounts/AccessDenied.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudHMvQWNjZXNzRGVuaWVkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/jitendrasharma/Projects/TD Synnex Corp/synnex-mvc-app-1/synnex-mvc-app-1/Views/Accounts/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudHMvTG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

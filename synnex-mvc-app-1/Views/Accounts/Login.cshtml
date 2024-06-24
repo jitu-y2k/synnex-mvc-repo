@@ -5,21 +5,25 @@
 @{
 }
 
-<h2>Login</h2>
+<h2 class="text-center">Login</h2>
 
-<form method="post">
-    <div>
+<form method="post" class="offset-md-2 col-8">
+    <div class="mt-3">
         <label asp-for="Email">Email</label>
         <input asp-for="Email" class="form-control" />
     </div>
 
-    <div>
+    <div class="mt-3">
         <label asp-for="Password">Password</label>
-        <input asp-for="Password" class="form-control" type="password"/>
+        <input asp-for="Password" class="form-control" type="password" />
     </div>
 
-    <div>
-        <button type="submit" class="btn btn-primary">Login</button>
+    <div class="row">
+        <div class="mt-3 text-center">
+            <button type="submit" class="btn btn-primary mx-3 col-3">Login</button>
+            @*<button type="button" class="btn btn-success">Register</button>*@
+            @Html.ActionLink("New User? Register", "Register", "Accounts", null, new { @class = "align-bottom" })
+        </div>          
     </div>
 </form>
 

@@ -12,17 +12,28 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="8.0.6" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.6">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <None Remove="ViewModels\" />
     <None Remove="Data\" />
     <None Remove="Views\Student\" />
     <None Remove="Views\Accounts\" />
+    <None Remove="Pages\" />
+    <None Remove="Pages\Teachers\" />
+    <None Remove="AutorizationRequirements\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ViewModels\" />
     <Folder Include="Data\" />
     <Folder Include="Views\Student\" />
     <Folder Include="Views\Accounts\" />
+    <Folder Include="Pages\" />
+    <Folder Include="Pages\Teachers\" />
+    <Folder Include="AutorizationRequirements\" />
   </ItemGroup>
 </Project>

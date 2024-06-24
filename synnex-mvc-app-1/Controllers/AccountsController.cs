@@ -30,7 +30,7 @@ namespace synnex_mvc_app_1.Controllers
                 claims.Add(new Claim(ClaimTypes.Email, login.Email));
                 claims.Add(new Claim(ClaimTypes.Name, login.Email));
 
-                claims.Add(new Claim("Age", "17"));
+                claims.Add(new Claim("Age", "18"));
 
                 var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
 
@@ -60,6 +60,11 @@ namespace synnex_mvc_app_1.Controllers
             HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
             return RedirectToAction(nameof(Login));
             
+        }
+
+        public IActionResult AccessDenied()
+        {
+            return View();
         }
     }
 }

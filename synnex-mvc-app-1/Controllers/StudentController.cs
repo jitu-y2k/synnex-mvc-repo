@@ -11,28 +11,38 @@ using synnex_mvc_app_1.Models;
 
 namespace synnex_mvc_app_1.Controllers
 {
-    [Authorize]
+    //[Authorize]
     public class StudentController : Controller
     {
+        private readonly StudentRespository _studentRepo;
+
+        public StudentController(StudentRespository studentRepo)
+        {
+            _studentRepo = studentRepo;
+        }
+
         // GET: /<controller>/
         public IActionResult Index()
         {
-            var students = StudentRespository.Students;
+            //var students = StudentRespository.Students;
+            var students = _studentRepo.GetStudents();
             return View(students);
         }
 
         public IActionResult StudentDetails(int id)
         {
-            var student = StudentRespository.Students.Find(s=> s.Id == id);
+            var student = _studentRepo.GetStudent(id);
             return View(student);
         }
 
+        [Authorize(Policy ="ShouldBe18YearsOld")]
         public IActionResult CreateStudent()
         {
             return View();
         }
 
-        [HttpPost]        
+        [HttpPost]
+        [Authorize(Policy = "ShouldBe18YearsOld")]
         public IActionResult CreateStudent(Student student)
         {
             if (!ModelState.IsValid)
@@ -50,7 +60,9 @@ namespace synnex_mvc_app_1.Controllers
                 }
             }
 
-            StudentRespository.Students.Add(student);
+            //StudentRespository.Students.Add(student);
+
+            _studentRepo.CreateStudent(student);
 
             return RedirectToAction(nameof(Index));
         }

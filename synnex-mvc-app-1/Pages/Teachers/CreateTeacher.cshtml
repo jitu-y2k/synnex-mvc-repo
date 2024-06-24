@@ -1,0 +1,22 @@
+﻿@page
+@model CreateTeacherModel
+@{
+}
+
+<h2>Create Teacher</h2>
+
+<form method="post">
+    <div class="mt-3">
+        <label asp-for="Teacher.Name">Name</label>
+        <input asp-for="Teacher.Name" class="form-control" />
+    </div>
+
+    <div class="mt-3">
+        <label asp-for="Teacher.Subject">Subject</label>
+        <input asp-for="Teacher.Subject" class="form-control" />
+    </div>
+
+    <div class="mt-3">
+        <button type="submit" class="btn btn-primary">Create</button>
+    </div>
+</form>
