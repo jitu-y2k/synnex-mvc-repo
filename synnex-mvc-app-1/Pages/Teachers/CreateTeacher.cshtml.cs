@@ -1,7 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+
+using System.Collections.Generic;
 using synnex_mvc_app_1.Data;
 using synnex_mvc_app_1.Models;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace synnex_mvc_app_1.Pages.Teachers
 {
@@ -9,16 +12,21 @@ namespace synnex_mvc_app_1.Pages.Teachers
     {
         //[BindProperty]
         public Teacher Teacher { get; set; }
+        public SelectList SubjectList { get; set; }
 
         private readonly TeacherRespository _teacherRepo;
+        private readonly SubjectRespository _subjectRepo;
 
-        public CreateTeacherModel(TeacherRespository teacherRepo)
+
+        public CreateTeacherModel(TeacherRespository teacherRepo, SubjectRespository subjectRepo)
         {
             _teacherRepo = teacherRepo;
+            _subjectRepo = subjectRepo;
         }
 
         public void OnGet()
         {
+            SubjectList = new SelectList(_subjectRepo.GetSubjects(), "Id", "Name");
             
         }
 

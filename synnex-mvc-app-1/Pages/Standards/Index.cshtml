@@ -1,0 +1,32 @@
+﻿@page
+@model synnex_mvc_app_1.Pages.Standards.IndexModel
+@{
+}
+
+
+<h2>Standard List</h2>
+
+@Html.ActionLink("Create New Standard", "CreateStandard", "Standards", null, new { @class = "btn btn-success text-end", @style = "float:right;" })
+<table class="table">
+    <tr>
+        <th>Standard Name</th>
+    </tr>
+    @if (Model.StandardList == null)
+    {
+        <tr>
+            <td>No standard found!</td>
+        </tr>
+    }
+    else
+    {
+        foreach (var standard in Model.StandardList)
+        {
+            <tr>
+                <td>@standard.Name</td>
+            </tr>
+        }
+
+    }
+
+
+</table>

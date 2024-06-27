@@ -26,7 +26,7 @@ namespace synnex_mvc_app_1.Controllers
         {
             //var students = StudentRespository.Students;
             var students = _studentRepo.GetStudents();
-            return View(students);
+            return View(students);            
         }
 
         public IActionResult StudentDetails(int id)

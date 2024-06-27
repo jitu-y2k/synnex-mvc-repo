@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace synnex_mvc_app_1.Models
 {
@@ -9,8 +10,11 @@ namespace synnex_mvc_app_1.Models
 		[Required]
 		public string Name { get; set; }
 
-		[Required]
-		public string Subject { get; set; }
+		[ForeignKey("Subject")]
+		public int SubjectId { get; set; }
+
+		//[ForeignKey("SubjId")]
+		public virtual Subject Subject { get; set; }
 	}
 }
 

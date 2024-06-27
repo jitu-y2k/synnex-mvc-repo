@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.EntityFrameworkCore;
 using synnex_mvc_app_1.AutorizationRequirements;
 using synnex_mvc_app_1.Data;
+using synnex_mvc_app_1.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,14 +11,16 @@ builder.Services.AddHttpContextAccessor();
 builder.Services.AddDistributedMemoryCache();
 builder.Services.AddSession();
 
-
+//builder.Services.AddDbContext<ApplicationDbContext>();
 builder.Services.AddDbContext<ApplicationDbContext>(config =>
 {
-    config.UseSqlServer(builder.Configuration.GetConnectionString("Default"));
+    config.UseLazyLoadingProxies().UseSqlServer(builder.Configuration.GetConnectionString("Default"));
 });
 
 builder.Services.AddScoped<StudentRespository>();
 builder.Services.AddScoped<TeacherRespository>();
+builder.Services.AddScoped<SubjectRespository>();
+builder.Services.AddScoped<StandardRespository>();
 
 builder.Services.AddSingleton<IAuthorizationHandler, MinimumAgeHandler>();
 
@@ -98,5 +101,24 @@ app.MapControllerRoute(
 
 app.MapRazorPages();
 
+SeedData();
+
 app.Run();
 
+void SeedData()
+{
+    var dbContext = app.Services.CreateScope().ServiceProvider.GetRequiredService<ApplicationDbContext>();
+
+    if (dbContext.Database.GetPendingMigrations().Count() > 0)
+    {
+        dbContext.Database.Migrate();
+    }
+
+    //if (dbContext.Subjects.Count() == 0)
+    //{
+    //    dbContext.Subjects.AddRange(
+    //        new Subject { Id = 1, Name = "English" },
+    //            new Subject { Id = 2, Name = "Maths" }
+    //        );
+    //}
+}

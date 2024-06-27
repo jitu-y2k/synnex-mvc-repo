@@ -1,0 +1,19 @@
+﻿namespace synnex_mvc_app_1.Migrations
+{
+    /// <inheritdoc />
+    public partial class SubjectData : Migration
+    {
+        /// <inheritdoc />
+        protected override void Up(MigrationBuilder migrationBuilder)
+        {
+            migrationBuilder.Sql("Insert into Subjects(Name) Values ('English')");
+            migrationBuilder.Sql("Insert into Subjects(Name) Values ('Mathematics')");
+        }
+
+        /// <inheritdoc />
+        protected override void Down(MigrationBuilder migrationBuilder)
+        {
+            migrationBuilder.Sql("Truncate Table Subjects");
+        }
+    }
+}

@@ -17,6 +17,10 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.4" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter" Version="8.0.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="8.0.6" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="ViewModels\" />
@@ -26,6 +30,7 @@
     <None Remove="Pages\" />
     <None Remove="Pages\Teachers\" />
     <None Remove="AutorizationRequirements\" />
+    <None Remove="Pages\Standards\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ViewModels\" />
@@ -35,5 +40,6 @@
     <Folder Include="Pages\" />
     <Folder Include="Pages\Teachers\" />
     <Folder Include="AutorizationRequirements\" />
+    <Folder Include="Pages\Standards\" />
   </ItemGroup>
 </Project>

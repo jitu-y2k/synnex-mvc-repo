@@ -1,4 +1,5 @@
-﻿using synnex_mvc_app_1.Models;
+﻿using Microsoft.EntityFrameworkCore;
+using synnex_mvc_app_1.Models;
 
 namespace synnex_mvc_app_1.Data
 {
@@ -64,12 +65,15 @@ namespace synnex_mvc_app_1.Data
 
         public List<Teacher> GetTeachers()
         {
+            //Eager Loading
+            //return _dbContext.Teachers.Include("Subject").ToList();
+            //LazyLoading
             return _dbContext.Teachers.ToList();
         }
 
         public Teacher GetTeacher(int id)
         {
-            return _dbContext.Teachers.FirstOrDefault(s => s.Id == id);
+            return _dbContext.Teachers.FirstOrDefault(s => s.Id == id);            
         }
 
 

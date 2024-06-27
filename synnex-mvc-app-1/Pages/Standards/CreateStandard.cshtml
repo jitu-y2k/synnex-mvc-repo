@@ -1,0 +1,19 @@
+﻿@page
+@model synnex_mvc_app_1.Pages.Standards.CreateStandardModel
+@{
+}
+
+<h2>Create Standard</h2>
+
+<form method="post">
+    <div  class="mt-3">
+        <label asp-for ="Standard.Name">Name</label>
+        <input asp-for="Standard.Name"/>
+    </div>
+
+    <div class="mt-3">
+        <button type ="submit" class="btn btn-primary">Create</button>
+    </div>
+
+</form>
+
